@@ -5,3 +5,4 @@ dist-ssr
 .DS_Store
 .playwright-mcp
 *.log
+*.mp4.part

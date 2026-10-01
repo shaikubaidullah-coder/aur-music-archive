@@ -22,10 +22,10 @@ export const CollectionGallery: React.FC<CollectionGalleryProps> = ({
       {/* Editorial Section Introduction */}
       <div className="max-w-6xl mx-auto mb-10 sm:mb-14 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
         <h2 className="font-display text-2xl sm:text-3xl text-ink-primary tracking-tight">
-          The Four Records
+          The Eight Records
         </h2>
         <span className="text-xs font-mono text-ink-tertiary tracking-widest uppercase">
-          01 — 04
+          01 — 08
         </span>
       </div>
 

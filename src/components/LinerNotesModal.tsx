@@ -58,7 +58,7 @@ export const LinerNotesModal: React.FC<LinerNotesModalProps> = ({
             </p>
 
             <p>
-              This website is a small private place built to hold these four recordings without algorithms, ranking, or social feeds. Just the artwork, the songs, and space to listen.
+              This website is a small private place built to hold these recordings without algorithms, ranking, or social feeds. Just the artwork, the songs, and space to listen.
             </p>
           </div>
 

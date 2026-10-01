@@ -35,7 +35,7 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {/* Discrete Track Number Nav */}
-      <nav aria-label="Track Navigation" className="flex items-center space-x-4 sm:space-x-8 text-xs font-mono select-none">
+      <nav aria-label="Track Navigation" className="flex items-center space-x-2 xs:space-x-3 sm:space-x-5 md:space-x-7 text-xs font-mono select-none">
         {SONGS.map((song) => {
           const isActive = song.id === currentSong.id;
           return (

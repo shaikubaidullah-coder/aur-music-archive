@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-canvas: #0a0b0e;
+  --bg-surface: #12141a;
+  --bg-surface-elevated: #1a1d26;
+  --bg-surface-translucent: rgba(18, 20, 26, 0.86);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.18);
+  --border-focus: rgba(224, 216, 200, 0.40);
+  --text-primary: #f3efe9;
+  --text-secondary: #9fa3af;
+  --text-tertiary: #636773;
+  --accent-gold: #d4af37;
+  --accent-terracotta: #c86446;
+  --accent-glow: rgba(212, 175, 55, 0.12);
+}
+
+@layer base {
+  html {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+  }
+  
+  body {
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100dvh;
+    overflow-x: hidden;
+  }
+}
+
+/* Vinyl Record Grooves Shader */
+.vinyl-disc {
+  background: 
+    radial-gradient(circle at center, transparent 29.5%, rgba(0, 0, 0, 0.95) 30%),
+    repeating-radial-gradient(
+      circle at center,
+      #111316 0px,
+      #111316 2px,
+      #191b20 3px,
+      #111316 4px,
+      #090a0c 5px
+    );
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.9),
+    inset 0 0 12px rgba(255, 255, 255, 0.05),
+    inset 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+.vinyl-sheen {
+  background: conic-gradient(
+    from 45deg,
+    transparent 0deg,
+    rgba(255, 255, 255, 0.07) 45deg,
+    transparent 90deg,
+    rgba(255, 255, 255, 0.05) 180deg,
+    transparent 225deg,
+    rgba(255, 255, 255, 0.07) 270deg,
+    transparent 360deg
+  );
+}
+
+/* Tactile Archival Paper Shadow */
+.archival-sleeve {
+  box-shadow: 
+    0 30px 60px -15px rgba(0, 0, 0, 0.85),
+    0 10px 24px -10px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+/* Film Grain Texture */
+.film-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-surface-elevated);
+  border-radius: 3px;
+  border: 1px solid var(--border-subtle);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-medium);
+}
+
+@keyframes room-breathe {
+  0%, 100% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.04);
+  }
+}
+
+.animate-room-breathe {
+  animation: room-breathe 7s ease-in-out infinite;
+}
+
+@keyframes artwork-breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.012);
+  }
+}
+
+.animate-artwork-breathe {
+  animation: artwork-breathe 6s ease-in-out infinite;
+}
+
+.font-urdu {
+  font-family: 'Noto Nastaliq Urdu', 'Amiri', 'Geeza Pro', serif;
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

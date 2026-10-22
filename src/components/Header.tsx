@@ -35,14 +35,14 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       {/* Discrete Track Number Nav */}
-      <nav aria-label="Track Navigation" className="flex items-center space-x-2 xs:space-x-3 sm:space-x-5 md:space-x-7 text-xs font-mono select-none">
+      <nav aria-label="Track Navigation" className="flex items-center space-x-1.5 xs:space-x-2.5 sm:space-x-4 md:space-x-6 text-xs font-mono select-none overflow-x-auto max-w-[55vw] sm:max-w-none [scrollbar-width:none] [&::-webkit-scrollbar]:hidden shrink py-1">
         {SONGS.map((song) => {
           const isActive = song.id === currentSong.id;
           return (
             <button
               key={song.id}
               onClick={() => onSelectSong(song)}
-              className={`relative py-1 transition-all duration-300 cursor-pointer ${
+              className={`relative py-1 shrink-0 transition-all duration-300 cursor-pointer ${
                 isActive
                   ? 'text-ink-primary font-medium scale-110'
                   : 'text-ink-tertiary hover:text-ink-secondary'

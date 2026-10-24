@@ -1,36 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <!-- Outer Vinyl Edge with dark depth and subtle rim light -->
-  <circle cx="32" cy="32" r="30" fill="#0d0e12" stroke="#2a2c35" stroke-width="1.5" />
+  <!-- Deep Obsidian Canvas with Soft Rounded Corners -->
+  <rect width="64" height="64" rx="16" fill="#0C0D11" />
   
-  <!-- Subtle Concentric Sound Grooves -->
-  <circle cx="32" cy="32" r="25" stroke="#f3efe9" stroke-opacity="0.12" stroke-width="0.8" />
-  <circle cx="32" cy="32" r="20" stroke="#f3efe9" stroke-opacity="0.16" stroke-width="0.8" />
+  <!-- Subtle Warm Amber Starlight Ambient Radial Glow -->
+  <radialGradient id="aurAmbientGlow" cx="45%" cy="38%" r="62%">
+    <stop offset="0%" stop-color="#CFA276" stop-opacity="0.28" />
+    <stop offset="60%" stop-color="#CFA276" stop-opacity="0.06" />
+    <stop offset="100%" stop-color="#0C0D11" stop-opacity="0" />
+  </radialGradient>
+  <rect width="64" height="64" rx="16" fill="url(#aurAmbientGlow)" />
   
-  <!-- Central Record Hub / Label in Warm Deep Tone with Brass Accent -->
-  <circle cx="32" cy="32" r="14.5" fill="#171820" stroke="#d4af37" stroke-opacity="0.75" stroke-width="1.25" />
-  
-  <!-- Delicate Inner Ring -->
-  <circle cx="32" cy="32" r="12.5" stroke="#d4af37" stroke-opacity="0.25" stroke-width="0.5" stroke-dasharray="2 1.5" />
-  
-  <!-- Architectural 'A' Listening Mark -->
-  <!-- Clean triangular apex pointing upward like a precision stylus / monogram -->
+  <!-- Hairline Border for Optical Definition on Light/Dark Tabs -->
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="15.25" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1.5" />
+
+  <!-- Hero Hand-Drawn Doodle Star (Continuous-Stroke Sketch with Overlaps) -->
+  <!-- Tilted slightly (~8°) with authentic pen crossing lines from Reference 1 -->
   <path 
-    d="M 32 21.5 L 24.5 38.5 M 32 21.5 L 39.5 38.5" 
-    stroke="#f3efe9" 
+    d="M 23 48.5 L 30.5 13.5 L 42 49 L 14 26 L 49.5 24.5 Z" 
+    stroke="#FDFBF7" 
+    stroke-width="3.6" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+  />
+
+  <!-- Secondary Hand-Drawn Sketch Star (Bottom-Left) -->
+  <path 
+    d="M 11.5 54.5 L 14 46 L 18 53.5 L 9 49 L 19 48 Z" 
+    stroke="#DDD8CE" 
+    stroke-width="1.9" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+    opacity="0.95"
+  />
+
+  <!-- Companion Sparkle Star (Mid-Right, Warm Gold Tone from Reference 2) -->
+  <path 
+    d="M 47.5 48.5 L 49 42.5 L 53 48 L 46 45 L 53.5 44.5 Z" 
+    stroke="#E5BE90" 
     stroke-width="2.2" 
     stroke-linecap="round" 
-    stroke-linejoin="round" 
+    stroke-linejoin="round"
   />
-  <line 
-    x1="27" 
-    y1="33" 
-    x2="37" 
-    y2="33" 
-    stroke="#d4af37" 
-    stroke-width="1.6" 
-    stroke-linecap="round" 
-  />
-  
-  <!-- Central Turntable Spindle Point -->
-  <circle cx="32" cy="32" r="1.6" fill="#0d0e12" stroke="#d4af37" stroke-width="0.9" />
 </svg>
